@@ -1,0 +1,9 @@
+
+
+
+
+Solution/*/bin/
+Solution/*/obj/
+.vs/
+
+**/node_modules/**

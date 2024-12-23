@@ -1,0 +1,15 @@
+{
+  "name": "elin-tool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@zwa73/dev-utils": "^1.0.71",
+    "@zwa73/utils": "^1.0.164"
+  }
+}
