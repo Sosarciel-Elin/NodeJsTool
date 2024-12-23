@@ -3,13 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "call tsc & call tsc-alias",
+    "watch": "powershell scripts/watch",
+    "expand-macro": "powershell scripts/expand-macro"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@deepkit/type": "^1.0.1-alpha.155",
     "@zwa73/dev-utils": "^1.0.71",
-    "@zwa73/utils": "^1.0.164"
+    "@zwa73/utils": "^1.0.164",
+    "commander": "^12.1.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@deepkit/type-compiler": "^1.0.1-alpha.155",
+    "typescript": "^5.5.4"
   }
 }
