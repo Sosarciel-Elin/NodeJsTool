@@ -43,7 +43,6 @@ export const getTypes = (format: Record<string, Column<any>>) =>
     Object.entries(format).reduce((acc,[,v]) =>
         (acc[v.i] = v.t , acc), Array<string>(columnCount(format)).fill(''));
 
-// 解析为 XLSX
 export const parseToXlsx = <T extends Record<string, Column<any>>>
     (format: T, data: Array<Record<string, any>>) => {
     const headers = getHeader(format);
