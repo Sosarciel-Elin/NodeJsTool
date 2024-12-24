@@ -1,7 +1,6 @@
 
 
 import { integer } from "@deepkit/type";
-import * as XLSX from "xlsx";
 
 export type VaildExcelType = string | number | number[] | string[];
 export type VaildExcelString = 'string'|'int'|'string[]'|'int[]';
@@ -22,12 +21,12 @@ export type StringToType<T extends VaildExcelString> =
 export type Column<T extends VaildExcelString, L = undefined> = {
     i:integer,
     t:T,
-    d:StringToType<T>,
+    d:StringToType<T>|undefined,
     literal:L
 };
 
 export const column = <T extends VaildExcelString, L = undefined>
-    (i:number,t:T,d:StringToType<T>,literal:L=undefined as L):Column<T,L> =>
+    (i:number,t:T,d:StringToType<T>|undefined=undefined,literal:L=undefined as L):Column<T,L> =>
         ({i,t,d,literal});
 
 export type FormatToRow<T extends Record<string,Column<any,any>>>= {
@@ -37,4 +36,8 @@ export type FormatToRow<T extends Record<string,Column<any,any>>>= {
         : StringToType<T[P]['t']>
 };
 
+
+export type RowToJsonList
+    <T extends Record<string,any>,R extends string> =
+    (Partial<T> & Pick<T,R>)[];
 

@@ -2,12 +2,10 @@ import { Command } from 'commander';
 import fs from 'fs';
 import { UtilFT } from '@zwa73/utils';
 import path from 'pathe';
-import { NameFormatMap, parseToXlsx } from '@src/Util';
-import * as XLSX from "xlsx";
+import { NameFormatMap, addDataToXlsxSheet } from '@src/Util';
+import exceljs from 'exceljs';
 
-
-
-export const CmdBuildSrt = (program: Command) => program
+export const CmdBuildXlsx = (program: Command) => program
     .command("Build-Xlsx")
     .alias("buildxlsx")
     .description("根据json文件夹生成xlsx")
@@ -21,17 +19,16 @@ export const CmdBuildSrt = (program: Command) => program
                 data:await UtilFT.loadJSONFile(path.join(inputDir,f)) as any,
                 name:path.parse(f).name,
             })));
-        const workbook = XLSX.utils.book_new();
+        const workbook = new exceljs.Workbook();
         fileDatas.forEach(({data,name}) => {
             const format = NameFormatMap[name];
             if(format==null){
                 console.log("未找到格式",name);
                 return;
             }
-            const worksheet = parseToXlsx(format,data);
-            XLSX.utils.book_append_sheet(workbook, worksheet,name);
+            addDataToXlsxSheet(workbook,name,format,data);
         });
         // 将工作簿写入文件
-        XLSX.writeFile(workbook, output);
+        workbook.xlsx.writeFile(output);
         console.log(`XLSX 文件已成功生成: ${output}`);
     });

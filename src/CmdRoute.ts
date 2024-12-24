@@ -1,9 +1,9 @@
 import { program } from "commander";
-import { CmdBuildSrt } from "./Command/BuildXlsx";
+import { CmdBuildXlsx } from "./Command/BuildXlsx";
 
 
 
 export async function cliRoute() {
-    CmdBuildSrt(program);
+    CmdBuildXlsx(program);
     program.parse(process.argv);
 }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile": "call tsc & call tsc-alias",
+    "compile": "powershell scripts/compile",
     "watch": "powershell scripts/watch",
     "expand-macro": "powershell scripts/expand-macro",
     "build-schema": "powershell scripts/build-schema"
@@ -16,7 +16,7 @@
     "@zwa73/dev-utils": "^1.0.71",
     "@zwa73/utils": "^1.0.164",
     "commander": "^12.1.0",
-    "xlsx": "^0.18.5"
+    "exceljs": "^4.4.0"
   },
   "devDependencies": {
     "@deepkit/type-compiler": "^1.0.1-alpha.155",
