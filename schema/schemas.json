@@ -1,0 +1,265 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"SourceThingTable": {
+			"type": "array",
+			"items": {
+				"allOf": [
+					{
+						"$ref": "#/definitions/Partial<FormatToRow<{id:Column<\"string\",undefined>;name_JP:Column<\"string\",undefined>;unknown_JP:Column<\"string\",undefined>;unit_JP:Column<\"string\",undefined>;naming:Column<\"string\",undefined>;name:Column<\"string\",undefined>;unit:Column<\"string\",undefined>;unknown:Column<\"string\",undefined>;category:Column<\"string\",undefined>;\"***\":Column<\"string\",undefined>;sort:Column<\"int\",undefined>;_tileType:Column<\"string\",undefined>;_idRenderData:Column<\"string\",(`${string}SchemaString`|\"@obj_Sflat\")[]>;tiles:Column<\"int[]\",undefined>;altTiles:Column<\"int[]\",undefined>;anime:Column<\"int[]\",undefined>;skins:Column<\"int[]\",undefined>;size:Column<\"int[]\",undefined>;colorMod:Column<\"int\",undefined>;colorType:Column<\"string\",undefined>;recipeKey:Column<\"string\",undefined>;factory:Column<\"string[]\",undefined>;components:Column<\"string[]\",undefined>;disassemble:Column<\"string[]\",undefined>;defMat:Column<\"string\",undefined>;tierGroup:Column<\"string\",undefined>;value:Column<\"int\",undefined>;LV:Column<\"int\",undefined>;chance:Column<\"int\",undefined>;quality:Column<\"int\",undefined>;HP:Column<\"int\",undefined>;weight:Column<\"int\",undefined>;electricity:Column<\"int\",undefined>;trait:Column<\"string[]\",undefined>;elements:Column<\"string[]\",undefined>;range:Column<\"int\",undefined>;attackType:Column<\"string\",undefined>;offense:Column<\"int[]\",undefined>;substats:Column<\"int[]\",undefined>;defense:Column<\"int[]\",undefined>;lightData:Column<\"string\",undefined>;idExtra:Column<\"string\",undefined>;idToggleExtra:Column<\"string\",undefined>;idActorEx:Column<\"string\",undefined>;idSound:Column<\"string\",undefined>;tag:Column<\"string[]\",(`${string}SchemaString`|\"noQuality\"|\"noMaterialChange\")[][]>;workTag:Column<\"string\",undefined>;filter:Column<\"string[]\",(`${string}SchemaString`|\"gacha\")[][]>;roomName_JP:Column<\"string\",undefined>;roomName:Column<\"string\",undefined>;detail_JP:Column<\"string\",undefined>;detail:Column<\"string\",undefined>;}>>"
+					},
+					{
+						"$ref": "#/definitions/Pick<FormatToRow<{id:Column<\"string\",undefined>;name_JP:Column<\"string\",undefined>;unknown_JP:Column<\"string\",undefined>;unit_JP:Column<\"string\",undefined>;naming:Column<\"string\",undefined>;name:Column<\"string\",undefined>;unit:Column<\"string\",undefined>;unknown:Column<\"string\",undefined>;category:Column<\"string\",undefined>;\"***\":Column<\"string\",undefined>;sort:Column<\"int\",undefined>;_tileType:Column<\"string\",undefined>;_idRenderData:Column<\"string\",(`${string}SchemaString`|\"@obj_Sflat\")[]>;tiles:Column<\"int[]\",undefined>;altTiles:Column<\"int[]\",undefined>;anime:Column<\"int[]\",undefined>;skins:Column<\"int[]\",undefined>;size:Column<\"int[]\",undefined>;colorMod:Column<\"int\",undefined>;colorType:Column<\"string\",undefined>;recipeKey:Column<\"string\",undefined>;factory:Column<\"string[]\",undefined>;components:Column<\"string[]\",undefined>;disassemble:Column<\"string[]\",undefined>;defMat:Column<\"string\",undefined>;tierGroup:Column<\"string\",undefined>;value:Column<\"int\",undefined>;LV:Column<\"int\",undefined>;chance:Column<\"int\",undefined>;quality:Column<\"int\",undefined>;HP:Column<\"int\",undefined>;weight:Column<\"int\",undefined>;electricity:Column<\"int\",undefined>;trait:Column<\"string[]\",undefined>;elements:Column<\"string[]\",undefined>;range:Column<\"int\",undefined>;attackType:Column<\"string\",undefined>;offense:Column<\"int[]\",undefined>;substats:Column<\"int[]\",undefined>;defense:Column<\"int[]\",undefined>;lightData:Column<\"string\",undefined>;idExtra:Column<\"string\",undefined>;idToggleExtra:Column<\"string\",undefined>;idActorEx:Column<\"string\",undefined>;idSound:Column<\"string\",undefined>;tag:Column<\"string[]\",(`${string}SchemaString`|\"noQuality\"|\"noMaterialChange\")[][]>;workTag:Column<\"string\",undefined>;filter:Column<\"string[]\",(`${string}SchemaString`|\"gacha\")[][]>;roomName_JP:Column<\"string\",undefined>;roomName:Column<\"string\",undefined>;detail_JP:Column<\"string\",undefined>;detail:Column<\"string\",undefined>;}>,\"id\">"
+					}
+				]
+			}
+		},
+		"Partial<FormatToRow<{id:Column<\"string\",undefined>;name_JP:Column<\"string\",undefined>;unknown_JP:Column<\"string\",undefined>;unit_JP:Column<\"string\",undefined>;naming:Column<\"string\",undefined>;name:Column<\"string\",undefined>;unit:Column<\"string\",undefined>;unknown:Column<\"string\",undefined>;category:Column<\"string\",undefined>;\"***\":Column<\"string\",undefined>;sort:Column<\"int\",undefined>;_tileType:Column<\"string\",undefined>;_idRenderData:Column<\"string\",(`${string}SchemaString`|\"@obj_Sflat\")[]>;tiles:Column<\"int[]\",undefined>;altTiles:Column<\"int[]\",undefined>;anime:Column<\"int[]\",undefined>;skins:Column<\"int[]\",undefined>;size:Column<\"int[]\",undefined>;colorMod:Column<\"int\",undefined>;colorType:Column<\"string\",undefined>;recipeKey:Column<\"string\",undefined>;factory:Column<\"string[]\",undefined>;components:Column<\"string[]\",undefined>;disassemble:Column<\"string[]\",undefined>;defMat:Column<\"string\",undefined>;tierGroup:Column<\"string\",undefined>;value:Column<\"int\",undefined>;LV:Column<\"int\",undefined>;chance:Column<\"int\",undefined>;quality:Column<\"int\",undefined>;HP:Column<\"int\",undefined>;weight:Column<\"int\",undefined>;electricity:Column<\"int\",undefined>;trait:Column<\"string[]\",undefined>;elements:Column<\"string[]\",undefined>;range:Column<\"int\",undefined>;attackType:Column<\"string\",undefined>;offense:Column<\"int[]\",undefined>;substats:Column<\"int[]\",undefined>;defense:Column<\"int[]\",undefined>;lightData:Column<\"string\",undefined>;idExtra:Column<\"string\",undefined>;idToggleExtra:Column<\"string\",undefined>;idActorEx:Column<\"string\",undefined>;idSound:Column<\"string\",undefined>;tag:Column<\"string[]\",(`${string}SchemaString`|\"noQuality\"|\"noMaterialChange\")[][]>;workTag:Column<\"string\",undefined>;filter:Column<\"string[]\",(`${string}SchemaString`|\"gacha\")[][]>;roomName_JP:Column<\"string\",undefined>;roomName:Column<\"string\",undefined>;detail_JP:Column<\"string\",undefined>;detail:Column<\"string\",undefined>;}>>": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"name_JP": {
+					"type": "string"
+				},
+				"unknown_JP": {
+					"type": "string"
+				},
+				"unit_JP": {
+					"type": "string"
+				},
+				"naming": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"unit": {
+					"type": "string"
+				},
+				"unknown": {
+					"type": "string"
+				},
+				"category": {
+					"type": "string"
+				},
+				"***": {
+					"type": "string"
+				},
+				"sort": {
+					"type": "number"
+				},
+				"_tileType": {
+					"type": "string"
+				},
+				"_idRenderData": {
+					"anyOf": [
+						{
+							"type": "string",
+							"pattern": "^.*$"
+						},
+						{
+							"const": "@obj_S flat",
+							"type": "string"
+						}
+					]
+				},
+				"tiles": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"altTiles": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"anime": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"skins": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"size": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"colorMod": {
+					"type": "number"
+				},
+				"colorType": {
+					"type": "string"
+				},
+				"recipeKey": {
+					"type": "string"
+				},
+				"factory": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"components": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"disassemble": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"defMat": {
+					"type": "string"
+				},
+				"tierGroup": {
+					"type": "string"
+				},
+				"value": {
+					"type": "number"
+				},
+				"LV": {
+					"type": "number"
+				},
+				"chance": {
+					"type": "number"
+				},
+				"quality": {
+					"type": "number"
+				},
+				"HP": {
+					"type": "number"
+				},
+				"weight": {
+					"type": "number"
+				},
+				"electricity": {
+					"type": "number"
+				},
+				"trait": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"elements": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"range": {
+					"type": "number"
+				},
+				"attackType": {
+					"type": "string"
+				},
+				"offense": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"substats": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"defense": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"lightData": {
+					"type": "string"
+				},
+				"idExtra": {
+					"type": "string"
+				},
+				"idToggleExtra": {
+					"type": "string"
+				},
+				"idActorEx": {
+					"type": "string"
+				},
+				"idSound": {
+					"type": "string"
+				},
+				"tag": {
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "string",
+								"pattern": "^.*$"
+							},
+							{
+								"enum": [
+									"noMaterialChange",
+									"noQuality"
+								],
+								"type": "string"
+							}
+						]
+					}
+				},
+				"workTag": {
+					"type": "string"
+				},
+				"filter": {
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "string",
+								"pattern": "^.*$"
+							},
+							{
+								"const": "gacha",
+								"type": "string"
+							}
+						]
+					}
+				},
+				"roomName_JP": {
+					"type": "string"
+				},
+				"roomName": {
+					"type": "string"
+				},
+				"detail_JP": {
+					"type": "string"
+				},
+				"detail": {
+					"type": "string"
+				}
+			}
+		},
+		"Pick<FormatToRow<{id:Column<\"string\",undefined>;name_JP:Column<\"string\",undefined>;unknown_JP:Column<\"string\",undefined>;unit_JP:Column<\"string\",undefined>;naming:Column<\"string\",undefined>;name:Column<\"string\",undefined>;unit:Column<\"string\",undefined>;unknown:Column<\"string\",undefined>;category:Column<\"string\",undefined>;\"***\":Column<\"string\",undefined>;sort:Column<\"int\",undefined>;_tileType:Column<\"string\",undefined>;_idRenderData:Column<\"string\",(`${string}SchemaString`|\"@obj_Sflat\")[]>;tiles:Column<\"int[]\",undefined>;altTiles:Column<\"int[]\",undefined>;anime:Column<\"int[]\",undefined>;skins:Column<\"int[]\",undefined>;size:Column<\"int[]\",undefined>;colorMod:Column<\"int\",undefined>;colorType:Column<\"string\",undefined>;recipeKey:Column<\"string\",undefined>;factory:Column<\"string[]\",undefined>;components:Column<\"string[]\",undefined>;disassemble:Column<\"string[]\",undefined>;defMat:Column<\"string\",undefined>;tierGroup:Column<\"string\",undefined>;value:Column<\"int\",undefined>;LV:Column<\"int\",undefined>;chance:Column<\"int\",undefined>;quality:Column<\"int\",undefined>;HP:Column<\"int\",undefined>;weight:Column<\"int\",undefined>;electricity:Column<\"int\",undefined>;trait:Column<\"string[]\",undefined>;elements:Column<\"string[]\",undefined>;range:Column<\"int\",undefined>;attackType:Column<\"string\",undefined>;offense:Column<\"int[]\",undefined>;substats:Column<\"int[]\",undefined>;defense:Column<\"int[]\",undefined>;lightData:Column<\"string\",undefined>;idExtra:Column<\"string\",undefined>;idToggleExtra:Column<\"string\",undefined>;idActorEx:Column<\"string\",undefined>;idSound:Column<\"string\",undefined>;tag:Column<\"string[]\",(`${string}SchemaString`|\"noQuality\"|\"noMaterialChange\")[][]>;workTag:Column<\"string\",undefined>;filter:Column<\"string[]\",(`${string}SchemaString`|\"gacha\")[][]>;roomName_JP:Column<\"string\",undefined>;roomName:Column<\"string\",undefined>;detail_JP:Column<\"string\",undefined>;detail:Column<\"string\",undefined>;}>,\"id\">": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"id"
+			]
+		}
+	}
+}

@@ -5,7 +5,8 @@
   "scripts": {
     "compile": "call tsc & call tsc-alias",
     "watch": "powershell scripts/watch",
-    "expand-macro": "powershell scripts/expand-macro"
+    "expand-macro": "powershell scripts/expand-macro",
+    "build-schema": "powershell scripts/build-schema"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@deepkit/type-compiler": "^1.0.1-alpha.155",
+    "@types/fluent-ffmpeg": "^2.1.27",
     "typescript": "^5.5.4"
   }
 }
